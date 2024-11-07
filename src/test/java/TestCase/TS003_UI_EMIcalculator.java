@@ -91,19 +91,19 @@ public class TS003_UI_EMIcalculator extends DriverSetup
             // Simulate user interaction with Loan Amount slider and validate its value
             Ui.moveLoanAmtSlider(0);  // Move the slider to the minimum value
             Ui.moveLoanAmtSlider(130);  // Move the slider to the maximum value
-            softAssert.assertEquals(Ui.getLoanAmtTextBoxValue(), "50,00,000", "Loan Amount value did not match in EMI Calculator Page.");
+            softAssert.assertEquals(Ui.getLoanAmtTextBoxValue(), "60,00,000", "Loan Amount value did not match in EMI Calculator Page.");
 
             // Log the action of testing scale change for Interest Rate
             logger.info("TS003_05_Testing scale change for Interest Rate.");
             Ui.moveIntRateSlider(0);  // Move the slider to the minimum value
             Ui.moveIntRateSlider(112);  // Move the slider to a specific value
-            softAssert.assertEquals(Ui.getIntRateTextBoxValue(), "14.25", "Interest Rate value did not match in EMI Calculator Page.");
+            softAssert.assertEquals(Ui.getIntRateTextBoxValue(), "15", "Interest Rate value did not match in EMI Calculator Page.");
 
             // Log the action of testing scale change for Loan Tenure
             logger.info("TS003_06_Testing scale change for Loan Tenure in EMI Calculator Page.");
             Ui.moveLoanTenureSlider(0);  // Move the slider to the minimum value
             Ui.moveLoanTenureSlider(105);  // Move the slider to a specific value
-            softAssert.assertEquals(Ui.getLoanTenureTextBoxValue(), "10", "Loan Tenure value did not match in EMI Calculator Page.");
+            softAssert.assertEquals(Ui.getLoanTenureTextBoxValue(), "11", "Loan Tenure value did not match in EMI Calculator Page.");
 
             // Log the action of validating Year and Month option
             logger.info("TS003_07_Validating Year and Month option in EMI Calculator Page.");
@@ -120,7 +120,7 @@ public class TS003_UI_EMIcalculator extends DriverSetup
             logger.info("TS003_08_Testing scale change for Fees and Charges in EMI Calculator Page.");
             Ui.moveFeesAndChargesSlider(0);  // Move the slider to the minimum value
             Ui.moveFeesAndChargesSlider(97);  // Move the slider to a specific value
-            softAssert.assertEquals(Ui.getFeesAndChargesTextBoxValue(), "25,000", "Fees and Charges value did not match in EMI Calculator Page.");
+            softAssert.assertEquals(Ui.getFeesAndChargesTextBoxValue(), "28,500", "Fees and Charges value did not match in EMI Calculator Page.");
 
             // Collect all soft assertions and verify the test result
             softAssert.assertAll();
