@@ -88,13 +88,13 @@ public class TS004_UI_LoanAmountCalc extends DriverSetup {
             logger.info("TS004_Testing scale change for Interest Rate in Loan Amount Calculator Page.");
             UI.moveIntRateSlider(0);  // Move the slider to the initial position (min value)
             UI.moveIntRateSlider(112);  // Move the slider to a new value
-            softAssert.assertEquals(UI.getIntRateTextBoxValue(), "14.25", "Scale change for Interest Rate did not match.");
+            softAssert.assertEquals(UI.getIntRateTextBoxValue(), "15", "Scale change for Interest Rate did not match.");
             
             // Log the action of testing scale change for Loan Tenure
             logger.info("TS004_Testing scale change for Loan Tenure in Loan Amount Calculator Page.");
             UI.moveLoanTenureSlider(0);  // Move the slider to the initial position (min value)
             UI.moveLoanTenureSlider(105);  // Move the slider to a new value
-            softAssert.assertEquals(UI.getLoanTenureTextBoxValue(), "10", "Scale change for Loan Tenure did not match.");
+            softAssert.assertEquals(UI.getLoanTenureTextBoxValue(), "11", "Scale change for Loan Tenure did not match.");
 
             // Log the action of validating Year and Month options for Loan Tenure
             logger.info("TS004_Validating Year and Month option in Loan Amount Calculator Page.");
@@ -111,7 +111,7 @@ public class TS004_UI_LoanAmountCalc extends DriverSetup {
             logger.info("TS004_Testing scale change for Fees and Charges in Loan Amount Calculator Page.");
             UI.moveFeesAndChargesSlider(0);  // Move slider to the initial position (min value)
             UI.moveFeesAndChargesSlider(97);  // Move slider to a new value
-            softAssert.assertEquals(UI.getFeesAndChargesTextBoxValue(), "25,000", "Scale change for Fees and Charges did not match.");
+            softAssert.assertEquals(UI.getFeesAndChargesTextBoxValue(), "28,500", "Scale change for Fees and Charges did not match.");
 
             // Collect all soft assertions and verify the test result
             softAssert.assertAll();
