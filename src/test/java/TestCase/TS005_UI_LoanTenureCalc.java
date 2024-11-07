@@ -87,21 +87,21 @@ public class TS005_UI_LoanTenureCalc extends DriverSetup {
             logger.info("07.Testing scale change for Loan Amount in Loan Tenure Calculator page.");
             UI.moveLoanAmtSlider(0);  // Move the slider to the minimum position
             UI.moveLoanAmtSlider(130);  // Move the slider to the maximum position
-            softAssert.assertEquals(UI.getLoanAmtTextBoxValue(), "50,00,000", "Scale change for Loan Amount did not match.");
+            softAssert.assertEquals(UI.getLoanAmtTextBoxValue(), "60,00,000", "Scale change for Loan Amount did not match.");
             logger.info("08.Scale change for Loan Amount validated successfully.");
 
             // Test the scale change for Interest Rate slider and validate the displayed value
             logger.info("09.Testing scale change for Interest Rate in Loan Tenure Calculator page.");
             UI.moveIntRateSlider(0);  // Move the slider to the minimum value
             UI.moveIntRateSlider(112);  // Move the slider to a specified value
-            softAssert.assertEquals(UI.getIntRateTextBoxValue(), "14.25", "Scale change for Interest Rate did not match.");
+            softAssert.assertEquals(UI.getIntRateTextBoxValue(), "15", "Scale change for Interest Rate did not match.");
             logger.info("10.Scale change for Interest Rate validated successfully in Loan Tenure Calculator page.");
 
             // Test the scale change for Fees and Charges slider and validate the displayed value
             logger.info("11.Testing scale change for Fees and Charges in Loan Tenure Calculator page.");
             UI.moveFeesAndChargesSlider(0);  // Move the slider to the minimum position
             UI.moveFeesAndChargesSlider(97);  // Move the slider to the specified value
-            softAssert.assertEquals(UI.getFeesAndChargesTextBoxValue(), "25,000", "Scale change for Fees and Charges did not match.");
+            softAssert.assertEquals(UI.getFeesAndChargesTextBoxValue(), "28,500", "Scale change for Fees and Charges did not match.");
             logger.info("12.Scale change for Fees and Charges validated successfully in Loan Tenure Calculator page.");
 
             // After all soft assertions are done, collect and report the results
